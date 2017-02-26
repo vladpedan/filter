@@ -1,0 +1,20 @@
+.navbar {
+	text-align: center; 
+}
+
+.container-fluid {
+	display: inline-block; 
+}
+
+#tasks {
+	border: 1px solid aqua;
+	margin-top: 20px;
+}
+
+.checkbox i {
+	display: none;
+}
+
+.checkbox:hover i {
+	display: inline;
+}
