@@ -25,15 +25,16 @@
           <div class="input-group">
             <input type="text" class="form-control" id='taskName' placeholder="Learn...">
             <div class="input-group-btn">
-              <button class="btn btn-success" type="button">Send</button>
+              <button class="btn btn-success" type="button">Send</button>  
             </div>
           </div>
+          <button class="btn btn-primary" type="button" onclick="taskService.getTasks();">Load data</button>
         </form>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4 col-md-offset-4" id="tasks">
-        <div class="checkbox">
+        <!--<div class="checkbox">
           <label><input type="checkbox" value="">Learn HTML</label>
           <button class="close" type="submit">
             <i class="fa fa-times" aria-hidden="true"></i>
@@ -49,13 +50,14 @@
           <label><input type="checkbox" value="">Meet Angular</label>
            <button class="close" type="submit">
             <i class="fa fa-times" aria-hidden="true"></i>
-          </button><hr>        
-        </div>
+          </button><hr>       
+        </div>-->
       </div>
     </div>
 
     <script src="libs/jquery-3.1.1.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/taskService.js"></script>
     <script src="scripts/common.js"></script>
   </body>
 </html>
