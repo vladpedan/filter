@@ -2,15 +2,16 @@ var taskService = (function () {
     return {
         server: 'http://learn-todo.gear.host/api/tasks',        
         getTasks: function () {
-            var object = this;           
+            var self = this;           
             $.ajax({
-                url: object.server,
+                url: self.server,
                 type: 'GET',
                 success: function (response) {                  
                     console.log('Success', response);
                     for (var i = 0; i < response.length; i++) {
-                        createTask(response[i]);                                                                
+                        var someTask = createTask(response[i]);                                                                
                     }
+                    $('#tasks').append(someTask);
                 },
                 error: function (response) {
                     console.log('Error', response);
@@ -22,5 +23,5 @@ var taskService = (function () {
 }) ();
 
 $(document).on('click', '.navbar', function () {
-    $(this).css('background-color','white');
+    $(this).css('background-color','red');
 });

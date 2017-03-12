@@ -1,18 +1,22 @@
-$(document).on('change', "input[type='checkbox']", function() {
-	if($(this).is(":checked")) {
-		$(this).parent().css("text-decoration", "line-through");
-	} else {
-		$(this).parent().css("text-decoration", "none");
-	}
- })
+taskService.getTasks();
+
+
+$('#tasks').on('click', '.line-through', function () {
+	var taskRow = $(this).parents('.checkbox');
+    taskRow.toggleClass('completed');
+    var task = {
+        id: taskRow.data('taskid'),
+        title: taskRow.find('label').text(),
+        isDone: $(this).prop('checked')
+    };
+});
 
 $(document).on('click', '.close', function () {
     $(this).parent().remove();
 });
 
 function createTask(text) {
-	var createdDiv = '<div class="checkbox"><label><input type="checkbox" value="">' 
-	+ text + '</label><button class="close" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button><hr></div>';
+	var createdDiv = '<div class="checkbox'+ (task.isDone ? ' completed' : '') +'" data-taskid='+ task.id +'><label><input type="checkbox" value="" class="done-checkbox">' + task.title + '</label><i class="fa fa-times" aria-hidden="true"></i></button><hr></div>';
 	return createdDiv;
 }
 
