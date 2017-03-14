@@ -14,7 +14,26 @@ nav .container-fluid {
 .checkbox i {
 	display: none;
 }
+ 
+.checkbox {
+	padding-bottom: 10px;
+    border-bottom: 1px solid aqua;
+}
+
+.checkbox:last-child {
+     border-bottom: none;
+}
 
 .checkbox:hover i {
 	display: inline;
 }
+
+.checkbox.completed label {
+	text-decoration: line-through;
+	color: #ddd;
+}
+
+.panel-default {
+	margin-top: 30px;
+}
+
