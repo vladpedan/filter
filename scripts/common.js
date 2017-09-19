@@ -1,6 +1,3 @@
-taskService.getTasks();
-
-
 $('#tasks').on('click', '.line-through', function () {
 	var taskRow = $(this).parents('.checkbox');
     taskRow.toggleClass('completed');
@@ -23,22 +20,16 @@ $('#tasks').on('click', '.close', function () {
 });
 
 function createTask(task) {
-	var createdDiv = '<div class="checkbox'+ (task.isDone ? ' completed' : '') +'" data-taskid='+ task.id +'><label><input type="checkbox" value="" class="line-through">' + task.title + '</label> <button class="close" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+	var createdDiv = '<div class="checkbox'+ (task.isDone ? ' completed' : '') +'" data-taskid='+ task.id +'><label><input type="checkbox" value="" class="line-through">' + task + '</label> <button class="close" type="submit"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
 	return $('#tasks').append(createdDiv);;
 }
 
 $('.input-group-btn').click(function () {
     var text = $('#taskName').val();
     if (text !=''){
-      var task = {
-      	title: text,
-      }
-
-      taskService.addTask(task);
-      $('#task').val('');
+      $('#tasks').append(createTask(text));
     } else {
     	alert('Write something')
     }
 
 });
-
