@@ -4,165 +4,272 @@ html {
 }
 
 body {
-	background :url(../libs/note4.jpg) no-repeat center / cover;
+	font-family: Nexa Light, serif;
+	background: #ebebeb;
 	margin: 0;
 	padding: 0;
-	font-family: 'Gadugi', serif;
 	height: 100%; 
-    min-width:900px;
 }
 
-/* Хєдер */
+@font-face {
+	font-family: Nexa Light; /* имя шрифта для CSS правил */
+	src: local("Nexa Light"), /* проверяем наличие шрифта в ОС пользователя */
+	url(libs/Nexa Light.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+
+}
+
+/* Хедер */
 
 header {
-	display: flex;
 	width: 100%;
-	height: 185px;
-	background: #ffffff;
-	border-top: solid #778590 10px;
-	border-bottom: solid #f5f5f5 2px;
-	opacity: 1;
-	padding-top: 5px; 
+	background: #373737;
+	height: 120px;
+	padding: 0; 
+	margin-bottom: 20px;
 }
 
-.sticky {
-	display: none;
-}
-
-header.sticky {
-	display: block;
-	position: fixed;
-	height: 70px;
-	background: #778590;
-	transition: all 0.4s ease;
-
-}
-
-#photo.sticky {
-	display: block;
-	width: 60px;
+#header_row1, #header_row2 {
+	width: 1200px;
 	height: 60px;
+	margin: 0 auto; 
 }
 
-h1 {
-	margin-left: 30px;
-  	font-size: 40px;
-  	color: #4c4c58;
-  	margin-bottom: 20px;
-  	font-family: 'Segoe Print', serif;
+#header_row2 {
+	background: #474747;
 }
 
-h2 {
-	width: 300px;
-	display: inline-block;
-	font-size: 24px;
-  	color: #4c4c58;
-  	margin: 20px;
+.logo {
+	background: #f26c4f;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+    font-weight:bold;
 }
-
-h3 {
-	display: inline-block;
-  	color: #4c4c58; 
-  	margin: 0;
-}
-
-header a {
-	text-decoration: none;
-}
-
-#button, #location {
-	margin-top: 100px;
-	margin-left: 135px;
-}
-#button {
-	height: 30px;
-	width: 140px;
-	border-radius: 10px;
-	background: #4fbe46;
-	color: #f5f5f5;
-	padding: 5px;
-	border: solid #f5f5f5 1px;
-	font-weight: bold;
-}
-
-#button:hover {
-	color: #747774;
-	border: solid #747774 1px;
-}
-
-#photo {
+.triangle {
 	float: left;
- 	height: 180px;
-	width: 180px;
-	border-radius: 50%;
- 	
-  	margin: 0 50px 0 100px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7.5px 0 7.5px 15px;
+	border-color: transparent transparent transparent #f26c4f;
+	margin-right: 30px;
+	margin-top: 20px;
 }
 
+.triangle:nth-child(1) {
+	margin-top: 20px;
+	margin-left: -10px; 
+}
+
+header p, header li {
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.logo, header p, header li, header a{
+	color: white;
+	float: left;
+	text-decoration: none;
+	height: 60px;
+	box-sizing: border-box;
+}
+
+header li {
+	list-style-type: none;
+	width: 70px;
+	margin-right: 15px;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.navi {
+	width: 80px;
+	height: 60px;
+	box-sizing: border-box;
+	padding-left: 35px;
+	padding-top: 20px;
+	color: white;
+}
+
+.navi:nth-child(4) {
+	padding-left: 5px;
+}
+
+.navi, header ul, header p {
+	float: left;
+	margin: 0;
+}
 /* Основная часть */
 
-main {
-	width: 65%;
-	float: left;
-	padding-bottom: 50px;
-	
-
-}
-
-aside {
-	width: 35%;
-	float: right;
-	padding-bottom: 50px;
-	
-
-}
-
-main .content {
-	margin: 50px 20px 50px 100px;
-}
-
-aside .content {
-	margin: 50px 100px 50px 20px;
-}
-
 .content {
-	display: block;
-	background: #ffffff;
-	border: solid #f5f5f5 1px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content div  {
 	box-sizing: border-box;
-	padding-bottom: 15px;
-
+	margin: 0 5px 10px 0;
 }
 
-header:hover, .content:hover {
-	background: #1E90FF;
-	transition: 1s;
-	color:#ffffff;
+/* Сетка */
+
+.content div:nth-child(1), .content div:nth-child(2) {
+	grid-column-start: 1;
+	grid-column-end: 4;
 }
 
-.content img, p, h3, progress {
-	margin: 10px 10px 10px 20px;
+.content div:nth-child(6), .content div:nth-child(8) {
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
-#location a {
-	margin-left: 10px; 
+#row3, #row4, #row5 {
+	background: white;
 }
 
-.mail{
+.content div:nth-child(10) {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	background: white;
+}
+.content div:nth-child(7) {
+	background: #373737;
+	color: white;
+	height: 550px;
+}
+
+form {
+	margin: 5px 750px 5px 0; 
+}
+
+input[type=text] {
+    width: 170px;
+    height: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 200%;
+}
+
+form, #row1 img, #row1 span {
 	display: inline-block;
-	color: green;
-	text-decoration: none;
+	color: #8f8f8f;
 }
 
-progress {
-	width: 90%;
-	height: 20px;
+/* Галлерея */
+
+#row2 {
+	height: 490px;
+	padding: 0;
 }
+
+.gallery {
+	padding: 0 10px 0 10px; 
+	background: #373737;
+	color: white;
+	float: right;
+	width: 32%;
+	height: 100%;
+	text-align: center;
+	border-left: 5px solid #f26c4f;
+}
+
+/*#row2:after {
+    content: ''; 
+    position: absolute; 
+    left: 1510px; top: 200px; 
+    border: 10px solid transparent; 
+    border-left: 10px solid #f26c4f; 
+}*/
+
+.gallery p {
+	font-size: 12px;
+	text-align: left;
+	padding-left: 5px; 
+}
+
+.slider {
+	border-right: 5px solid #f26c4f;
+ 	z-index: 9;
+ 	float: left;
+ 	width: 800px;
+ 	height: 100%;
+ 	overflow: hidden;
+ 	position: relative;
+ 	margin: 0;
+ }
+
+ .slider ul,.slider li {
+ 	padding: 0;
+ 	margin: 0;
+ 	list-style-type: none;
+ 	float: left;
+ 	width: 800px;
+ 	height: 100%;
+ }
+
+ .slider ul {
+ 	width: 9999px; 
+ }
+
+ .slider .nav {
+ 	position: absolute;
+ 	left: 15px;
+ 	bottom: 12px; 
+ }
+
+ .slider .nav span {
+ 	opacity: 0.9;
+ 	background: #fff;
+	margin: 0 8px 0 0;
+	width: 16px;
+ 	height: 16px;
+ 	border-radius: 8px;
+ 	cursor: pointer;
+ 	overflow: hidden;
+ 	display: block;
+ 	float: left;
+ 	box-shadow: 0 1px 2px #000;
+ }
+
+ .slider .nav span.on {
+	 background: #f26c4f;
+ }
+
+/* Текстовые блоки */
+
+.content h2, .content h5 {
+	margin-left: 10px;
+}
+
+.textbox {
+	padding: 5px 5px 5px 5px;
+	width: 100%;
+	border-left: 3px solid #f26c4f;
+	background: white;
+}
+
+.textbox:hover, #row3:hover, #row4:hover, #row5:hover, #row7:hover, #row10:hover{
+	transition: 0.5s;
+	background: #f26c4f;
+	color: white;
+	border-left: 3px solid #474747;;
+}
+
 
 /* Футер */
 
-.wrap {
- 	padding-bottom: 200px;
+.wrap_footer{
+ 	padding-bottom: 50px;
 }
 
 footer{
@@ -170,40 +277,23 @@ footer{
 	bottom: 0;
 	width: 100%;
 	height: 50px;
-	background: #778590;
+	background: #373737;
 	color: white;
-	text-align: center;
+	font-size: 12px;
 }
 
-/* Аннимация */
-
-.container {
-  	width: 700px;
- 	 margin: 20px 50px;
+footer li {
+	list-style-type: none;
+	width: 100px;
+	margin-right: 15px;
+	font-size: 13px;
+	float: left;
 }
 
-ul {
-  	padding: 0;
-  	list-style: none;
-  	margin-bottom: 40px;
-}
-li {
-  	display: inline-block;
-  	width: 30px;
-  	height: 30px;
-  	border-radius: 50%;
-  	margin-right: 10px; 
-  	box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+footer a {
+	color: white;
+	text-decoration: none;
+	height: 100px;
 }
 
-li {background:#778590}
 
-.alternate li {
-  	animation: shake .7s linear alternate infinite;
-}
-
-@keyframes shake {
-  100% {
-    transform: translateX(-30px);    
-  }
-}
