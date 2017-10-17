@@ -3,209 +3,121 @@ html {
  	min-height:100%;
 }
 
-body {
-	font-family: Nexa Light;
-	background: #ebebeb;
+body{
 	margin: 0;
-	padding: 0;
-	height: 100%; 
+	padding: 0;  
+	font-family: Helvetica, serif;
 }
 
 @font-face {
-	font-family: Nexa Light; /* имя шрифта для CSS правил */
-	src: local('Nexa Light'), /* проверяем наличие шрифта в ОС пользователя */
-	url('../libs/Nexa Light.otf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+	font-family: Helvetica; /* имя шрифта для CSS правил */
+	src: local('Helvetica'), /* проверяем наличие шрифта в ОС пользователя */
+	url('../libs/Helvetica.ttf'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
 }
 
-.wrap {
-	width: 1200px;
-	margin: 0 auto;
 
-}
+/* Хедер*/
 
-/* Хедер */
-
-header {
-	width: 100%;
-	background: #373737;
-	height: 120px;
-	padding: 0; 
-	margin-bottom: 20px;
-}
-
-#header_row1, #header_row2 {
-	width: 1200px;
-	height: 60px;
-	margin: 0 auto; 
-}
-
-#header_row2 {
-	background: #474747;
-}
-
-.logo {
-	background: #f26c4f;
-    width: 100px;
-    height: 60px;
-    text-align: center;
-    font-size: 40px;
-    font-weight:bold;
-}
-.triangle {
-	float: left;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 7.5px 0 7.5px 15px;
-	border-color: transparent transparent transparent #f26c4f;
-	margin-right: 30px;
-	margin-top: 20px;
-}
-
-.triangle:nth-child(1) {
-	margin-top: 20px;
-	margin-left: -10px; 
-}
-
-header p, header li {
-	font-size: 20px;
-	padding-top: 20px;
-}
-
-.logo, header p, header li, header a{
-	color: white;
-	float: left;
-	text-decoration: none;
-	height: 60px;
+.row, footer {
+	padding: 5px 150px 5px 150px;
 	box-sizing: border-box;
+}
+
+#row1{
+	width: 100vw;
+ 	height: 100vh;
+ 	background: url(../libs/texture.png) no-repeat center top / cover;
+ 	color: white;
+ 	text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+
+#row1 a{
+	text-decoration: none;
+	list-style-type: none;
+	color: white;
+}
+header {
+	height: 20px;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
 }
 
 header li {
-	list-style-type: none;
+	padding-top: 5px;
+	display: inline-block;
+	margin-left: 20px;
 	width: 70px;
-	margin-right: 15px;
-	font-size: 14px;
-	padding-left: 10px;
+	height: 30px;
+	list-style-type: none;
+	font-size: 18px;
+	text-align: center;
 }
 
-.navi {
-	width: 80px;
-	height: 60px;
-	box-sizing: border-box;
-	padding-left: 35px;
-	padding-top: 20px;
-	color: white;
+@font-face {
+	font-family: Ballpark; /* имя шрифта для CSS правил */
+	src: local('Ballpark'), /* проверяем наличие шрифта в ОС пользователя */
+	url('../libs/Ballpark.TTF'); /* если шрифт не установлен, тогда загружаем его по указанному пути */
 }
 
-.navi:nth-child(4) {
-	padding-left: 5px;
+.logo{
+	font-size: 40px;
+	font-family: Ballpark, serif;
 }
 
-.navi, header ul, header p {
-	float: left;
-	margin: 0;
-}
-/* Основная часть */
-
-.content {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-}
-
-.content div  {
-	box-sizing: border-box;
-	margin: 0 5px 10px 0;
-}
-
-/* Сетка */
-
-.content div:nth-child(1), .content div:nth-child(2) {
-	grid-column-start: 1;
-	grid-column-end: 4;
-}
-
-.content div:nth-child(6), .content div:nth-child(8) {
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-
-#row3, #row4, #row5 {
-	background: white;
-}
-
-.content div:nth-child(10) {
-	grid-column-start: 1;
-	grid-column-end: 3;
-	background: white;
-}
-.content div:nth-child(7) {
-	background: #373737;
-	color: white;
-	height: 550px;
-}
-
-form {
-	margin: 5px 750px 5px 0; 
+.logo, .form {
+	padding-top: 15px; 
 }
 
 input[type=text] {
-    width: 170px;
-    height: 20px;
+	border: none;
+	height: 30px;
+	background: #2e2e2e;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.56);
+    width: 200px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
 
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-    width: 200%;
+/* Первый блок*/
+
+#main_column {
+	width: 40%;
+	height: 70%;
+	float: left;
+	margin-top: 50px;
+	overflow: hidden;
 }
 
-form, #row1 img, #row1 span {
-	display: inline-block;
-	color: #8f8f8f;
-}
-
-/* Галлерея */
-
-#row2 {
-	height: 490px;
-	padding: 0;
-}
-
-.gallery {
-	padding: 0 10px 0 10px; 
-	background: #373737;
-	color: white;
-	float: right;
-	width: 32%;
-	height: 100%;
+#button {
+	margin: 50px 0 100px 0; 
+	width: 150px;
+	height: 30px;
+	border-radius: 5px;
+	background: #989898; 
 	text-align: center;
-	border-left: 5px solid #f26c4f;
+	padding-top: 10px;
+	font-size: 18px;
+	box-shadow:  0px 0px 5px 2px rgba(0,0,0,0.56);
 }
 
-/*#row2:after {
-    content: ''; 
-    position: absolute; 
-    left: 1510px; top: 200px; 
-    border: 10px solid transparent; 
-    border-left: 10px solid #f26c4f; 
-}*/
-
-.gallery p {
-	font-size: 12px;
-	text-align: left;
-	padding-left: 5px; 
+#button:hover {
+	box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.56);
+	text-shadow: 1px 1px 2px black, 0 0 1em black;
 }
+
+/* Слайдер*/
 
 .slider {
-	border-right: 5px solid #f26c4f;
+	margin-top: 50px;
+	height: 60%;
+	width: 50%;
  	z-index: 9;
- 	float: left;
- 	width: 800px;
- 	height: 100%;
+ 	float: right;
+ 	height: 70%;
  	overflow: hidden;
  	position: relative;
- 	margin: 0;
  }
 
  .slider ul,.slider li {
@@ -213,8 +125,8 @@ form, #row1 img, #row1 span {
  	margin: 0;
  	list-style-type: none;
  	float: left;
- 	width: 800px;
- 	height: 100%;
+ 	width: 530px;
+ 	height: 60%;
  }
 
  .slider ul {
@@ -223,17 +135,16 @@ form, #row1 img, #row1 span {
 
  .slider .nav {
  	position: absolute;
- 	left: 15px;
+ 	right: 15px;
  	bottom: 12px; 
  }
 
  .slider .nav span {
  	opacity: 0.9;
- 	background: #fff;
+ 	background: #888888;
 	margin: 0 8px 0 0;
-	width: 16px;
+	width: 32px;
  	height: 16px;
- 	border-radius: 8px;
  	cursor: pointer;
  	overflow: hidden;
  	display: block;
@@ -242,29 +153,87 @@ form, #row1 img, #row1 span {
  }
 
  .slider .nav span.on {
-	 background: #f26c4f;
+	 background: #bebebe;
  }
 
-/* Текстовые блоки */
+/* Второй блок*/
 
-.content h2, .content h5 {
-	margin-left: 10px;
+#row2{
+	width: 100vw;
+ 	height: 130vh;
 }
 
-.textbox {
-	padding: 5px 5px 5px 5px;
+.wrapcolumn, .wrapcolumn1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	width: 100%;
-	border-left: 3px solid #f26c4f;
+	margin-top: -15vh;
+}
+
+.column, .column1{
+	width: 20%;
+	height: 64vh;
 	background: white;
+	padding: 25px;
 }
 
-.textbox:hover, #row3:hover, #row4:hover, #row5:hover, #row7:hover, #row10:hover{
-	transition: 0.5s;
-	background: #f26c4f;
+.column:nth-child(5) {
+	margin-top: -75px;
+}
+
+
+.column p:nth-child(2) {
+	color: grey;
+}
+
+.column p:nth-child(3) {
+	height: 30vh;
+	border-bottom: 10px solid;
+  	border-image: repeating-linear-gradient( 135deg, grey, grey 0.5%, white 0.5%, white 1.5%) 10;
+}
+
+.column img:hover {
+	opacity: 0.5;
+	background: black;
+}
+
+/* Третий блок*/
+
+#row3{
+	width: 100vw;
+ 	height: 60vh;
+ 	background: url(../libs/texture.png) no-repeat center top / cover;
+ 	text-shadow: 1px 1px 2px black, 0 0 1em black;
+}
+
+.wrapcolumn1 {
+	margin-top: 0;
+}
+
+.column1 {
+	background: inherit;
 	color: white;
-	border-left: 3px solid #474747;;
+	height: 46vh;
 }
 
+.column1 h3 {
+	border-bottom: 1px solid grey;
+	margin-bottom: 60px; 
+}
+
+#widget{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square {
+	background: #cdcdcd;
+	height: 50px;
+	width: 50px;
+	border: 3px solid white;
+	margin: 5px;
+}
 
 /* Футер */
 
@@ -276,24 +245,18 @@ footer{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 50px;
-	background: #373737;
-	color: white;
+	height: 10vh;
+	background: url(../libs/footer.png) no-repeat center / cover;
+	color: grey;
 	font-size: 12px;
+	box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.56);
 }
 
-footer li {
-	list-style-type: none;
-	width: 100px;
-	margin-right: 15px;
-	font-size: 13px;
+footer .logo, .location, .info {
 	float: left;
+	height: 100%;
 }
 
-footer a {
-	color: white;
-	text-decoration: none;
-	height: 100px;
+.location {
+	margin: 0 50px 0 50px;
 }
-
-
