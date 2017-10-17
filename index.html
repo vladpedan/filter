@@ -1,132 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Landing Page #2</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="libs/jquery-3.1.1.min.js"></script>
-  <script src="scripts/script.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/users.js"></script>
+    <script src="scripts/collections.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <div class="row" id="row1">
-    <header>
-      <div class="logo">Portfolio</div>
-      <ul>
-        <li><a href="#row1">Home</a></li>
-        <li><a href="#row3">About</a></li>
-        <li><a href="#row2">Portfolio</a></li>
-        <li><a href="#row2">Blog</a></li>
-        <li><a href="#row3">Archives</a></li>
-        <li><a href="#row3">Contact</a></li>
-      </ul>
-      <div class="form"><input type="text" name="search" placeholder="  Search.."></div>
-    </header>
-    <div id="main_column">
-      <h1>Portfolio Website Theme: <br>Perfect for Anyone</h1>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. <br><br>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. </h3>
-      <div id="button"><a href="#">See Our Work</a></div>
-    </div>
-      <div class="slider">
-        <ul>
-          <li><img src="libs/slide1.png" alt="" width="100%"></li>
-          <li><img src="libs/slide2.png" alt="" width="100%"></li>
-          <li><img src="libs/slide3.png" alt="" width="100%"></li>
-        </ul>
-      </div>
-  </div>
 
-  <div class="row" id="row2">
-    <div class="wrapcolumn">
-      <div class="column">
-        <h3>What I Can All Do</h3>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel.</p>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel ei, mel erat ancillae eloquent iam id. Movet facete sea cu, deleniti adipiscing id eum. Mel alia consul constituto ex, no his inani reformidans accommoda re. Et eos viderer appellantur, ferri inimicus an ius, ne inermis deseruisse ius.</p>
-        <p>Read More</p>
-      </div>
-      <div class="column">
-        <h3>A Little Bit About Me</h3>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel.</p>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel ei, mel erat ancillae eloquent iam id. Movet facete sea cu, deleniti adipiscing id eum. Mel alia consul constituto ex, no his inani reformidans accommoda re. Et eos viderer appellantur, ferri inimicus an ius, ne inermis deseruisse ius.</p>
-        <p>Read More</p>
-      </div>
-      <div class="column">
-        <h3>Follow Me on Twitter</h3>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel.</p>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel ei, mel erat ancillae eloquent iam id. Movet facete sea cu, deleniti adipiscing id eum. Mel alia consul constituto ex, no his inani reformidans accommoda re. Et eos viderer appellantur, ferri inimicus an ius, ne inermis deseruisse ius.</p>
-        <p>Read More</p>
-      </div>
-      <div class="column">
-        <h3>Feel Free To Contact Me</h3>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel.</p>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel ei, mel erat ancillae eloquent iam id. Movet facete sea cu, deleniti adipiscing id eum. Mel alia consul constituto ex, no his inani reformidans accommoda re. Et eos viderer appellantur, ferri inimicus an ius, ne inermis deseruisse ius.</p>
-        <p>Read More</p>
-      </div>
-      <div class="column">
-        <h3>Recent Work</h3>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel.</p>
-        <p>Lorem ipsum dolor sit amet, omnis euismod indoctum mel ei, mel erat ancillae eloquent iam id. Movet facete sea cu, deleniti adipiscing id eum. Mel alia consul constituto ex, no his inani reformidans accommoda re. Et eos viderer appellantur, ferri inimicus an ius, ne inermis deseruisse ius.</p>
-      </div>
-      <div class="column">
+<label id='label' for="filter">Filter by name, surname or skill</label>
+<input type="text" id="filter">
 
-        <img src="libs/pic1.png" alt="" width="100%">
-        <img src="libs/pic2.png" alt="" width="100%">
-      </div>
-      <div class="column">
-        <img src="libs/pic3.png" alt="" width="100%">
-        <img src="libs/pic4.png" alt="" width="100%">
-      </div>
-      <div class="column">
-        <img src="libs/pic5.png" alt="" width="100%">
-        <img src="libs/pic6.png" alt="" width="100%">
-      </div>
-    </div>
-  </div>
+<table id="table">
+	<thead></thead>
+	<tbody></tbody>
+</table>
 
-  <div class="row" id="row3">
-    <div class="wrapcolumn1">
-      <div class="column1">
-        <h3>About Porftolio</h3>
-        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, persinioa inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. <br>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.</p>
-      </div>
-      <div class="column1">
-        <h3>Recent Posts</h3>
-        <p>Yastech Developments: The Best Web Design Company<br><br>Best PSD Freebies: Amazing Design Resource  Inspiration<br><br>Best PSD Freebies: Login Form<br><br>Wedding Photography Shoot Takes & Tricks</p>
-        
-      </div>
-      <div class="column1">
-        <h3>Twitter Widget</h3>
-        <p>@pixelmater What an awesome design with great functionality :)<br><br>@designdude What an awesome design with great functionality :)<br><br>Follow @psdfreebies</p>
-        
-      </div>
-      <div class="column1">
-        <h3>Flickr Widget</h3>
-        <div id="widget"><div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<span class="result">Not found</span>
 
-
-
-
-  <div class="wrap_footer"></div>
-    <footer>
-      <div class="logo">Portfolio</div>
-      <div class="location">
-        <p>The Ultimate Portfolio  Wordpress Theme on the Web</p>
-        <p>t: (888) 842 - 8356  e: info@bestpsdfreebies.com</p>
-      </div>
-      <div class="info">
-        <p>Copyright 2012. Powered by Wordpress</p>
-        <p>Portfolio Theme by Best PSD Freebies</p>
-      </div>  
-    </footer>
 </body>
 </html>
